@@ -32,8 +32,9 @@ export function Content({ selectedGenreId, selectedGenre }: ContentProps) {
   useEffect(() => {
     api.get<MovieProps[]>(`movies/?Genre_id=${selectedGenreId}`).then(response => {
       setMovies(response.data)
-    })
-
+      console.log("response", response.data)
+      console.log("genre id ", selectedGenreId)
+    }) 
   }, [selectedGenreId])
 
   return(

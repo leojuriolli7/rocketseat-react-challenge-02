@@ -26,7 +26,6 @@ export function SideBar({ handleClickButton, selectedGenreId }: SideBarProps) {
   return(
     <nav className="sidebar">
         <span>Watch<p>Me</p></span>
-
         <div className="buttons-container">
           {genres.map(genre => (
             <Button
